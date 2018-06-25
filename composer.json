@@ -1,0 +1,35 @@
+{
+    "name": "farindra-lumen/uuid",
+    "description": "Lumen UUID",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "farindra",
+            "email": "farindra.project@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"php" : "^7.0"
+	},
+	"require-dev" : {
+		"fzaninotto/faker": "~1.4",
+		"phpunit/phpunit": "~6.0"
+    },
+	"autoload" : {
+		"psr-0" : {
+			"FarindraLumen\\Uuid" : "src/"
+		}
+	},
+	"extra": {
+        "laravel": {
+			"providers": [
+				"FarindraLumen\\Uuid\\UuidServiceProvider"
+			],
+            "aliases": {
+                "Uuid": "FarindraLumen\\Uuid\\Uuid"
+            }
+        }
+    }
+}
